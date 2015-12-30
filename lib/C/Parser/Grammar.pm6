@@ -940,7 +940,7 @@ rule translation-unit {
     :my %*ENUMS;
     :my %*STRUCTS;
     :my %*TYPEDEFS;
-    :my @*CONTEXTS = @();
+    :my @*CONTEXTS = ();
 
     # BUILTIN_TYPEDEFS never changes
     # maybe this could be const/final?

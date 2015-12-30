@@ -613,7 +613,7 @@ method specifier-qualifier-list($/) {
     my @specs = @quals.grep({$_.WHAT === Spec});
     @specs = C::AST::Specs.new(children => @specs);
     my @children = @quals.grep({$_.WHAT !=== Spec});
-    @children.unshift(@specs);
+    @children.prepend(@specs);
     my $op = TyKind::specifier_qualifier_list;
     make C::AST::TypeOp.new(:$op, :@children);
 }
